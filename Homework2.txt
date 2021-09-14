@@ -1,0 +1,71 @@
+Lección 3
+
+1. Escribir explicaciones de:
+
+	*'for'
+	+'&&', '||', '!'
+
+2. npm test jsII
+
+
+Bucles for
+
+Palabra clave for, seguida de paréntesis y  luego abrir y cerrar llaves.  Dentro de los paréntesis declararemos una variable, sobre lo que se repetirá e bucle.
+Tendremos una expresión condicional, el ciclo continuará sucediendo hasta que esta declaración sea false.  Tercero, incrementaremos nuestra variable y separaremos las declaraciones mediante punto y coma.
+
+for (let i = 0; i < 10; i++) {  // Declaramos la variaable / Expresión condicional / Incrementamos la variable
+
+	concole.lo(i);
+}
+
+Operadores logico '&&' (AND)
+
+Evaluará ambas expresiones y devolverá verdadero si AMBAS expresiones son true.  Si uno(o ambos) de ellos es false, este devolverá false.
+
+	if(100 > 10 && 10 === 10) {
+		console.log('Ambas declaraciones es true, este código se ejecutará'); 
+}
+
+	if(10 === 9 && 10 > 9) {
+		console.log('Una de las declaraciones es false, por lo que devolverá false y el código NO se ejecutará');
+}	
+
+
+Operador || ('Ó', 'OR')
+
+Determinará si una de las expresiones es true.  Devolverá true si una (o ambas) expresiones es true.  Devolverá false si AMBAS expresiones son false.
+
+	if(100 > 10 || 10 === 10) {
+		console.log('Ambas declaraciones son true, este código se ejecutará'); 
+}
+
+	if(10 === 9 || 10 > 9) {
+		console.log('Una de las declaraciones es true, por lo que || devolverá true y el código se ejecutará');
+}	
+
+	if(10 === 9 || 1 > 9) {
+		console.log('Ambas declaraciones son false, este código NO se ejecutará'); 
+}
+
+
+Operador ! (NOT)
+
+Significa que estamos preguntando lo contrario de la expresión.
+Devuelve valor booleano diferente de lo que se le pasa:
+
+	if (!false) {
+console.log('El devolverá true, porque es lo contrario de false, así que este código se ejecutará');
+
+}
+
+	if (!(1 === 1)) {
+    console.log('1 es igual a 1, de modo que la expresión devuelve true. El operador ! devolverá lo contrario de eso, por lo que este código NO se ejecutará');
+}
+
+
+Observaciones sobre operadores
+
+Las expresiones se evaluan en orden; por ello, si en una expresión &&, si la primera expresión es false, la segunda expresión no se evaluará porque AMBBAS expresiones deben ser true. Lo mismo para la declaración ||.  Si la primera expresión es verdadera, la segunda no se evaluará porque solo debe haber una declaración verdadera para cumplir con los requisitos del operador.
+
+
+ 

@@ -1,0 +1,124 @@
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+	* Variables
+	* Strings
+	* Funciones (argumentos, `return`)
+	* Declaraciones `if`
+	* Valores booleanos (`true`, `false`)
+
+Variables
+
+forma de almacenar el valor de algo para usar despues
+
+Para crearla usamos palabras claves (no pueden ser usadas como nombres):
+
+	-var nombre = 'juan';
+	-let apellido = 'Perez';
+	-const comidafavorita = 'Pizza';
+
+
+Strings
+
+Son bloques de texto, siempre se definiran entre comillas simple o doble. Siempre se consideraran cadena o string.
+
+Ejemplo:
+	var nombrePerro = 'firulais'
+
+
+
+Funciones (argumentos, 'return')
+
+Son tipos particulares de objetos, llamados callable objects u objetos invocables, por lo que tienen las mismas propiedades que cualquier objeto.
+Las funciones permiten calcular, cambiar y hacer tras cosas con las variables.
+
+Formas de construir funciones:
+
+function miFuncion() {} 
+	var otraFuncion = function () {};
+	var yOtra = () => {};
+
+Cuando un programa se ejecuta debe iniciar con la palabra clave function, luego debe estar el nombre de la funcion (se prefieren nombres que describan lo que hacen), luego viene un paréntesis abierto y cerrado, seguido de una llave abierta; entre las cuales irá todo el código a ejecutar y al teerminar se cierra la llave.
+
+Ejemplo:
+
+function logHola() { 
+	console.log('hola!');
+}
+
+logHola();
+
+
+Argumentos
+
+Se usan para llamar a una función.  Los valores que se le asignan a las variables los llamamos argumentos, por ejemplo:
+
+function logHola(nombre) {
+	console.log('Hola, ' + nombre);
+}
+
+logHola('Martin');
+
+Podemos agregar varios argumentos o valores a una variable agregando una oma entre ellos:
+
+function sumarDosNumeros(a,b) {
+	var suma =a + b;
+	return suma;
+}
+
+sumarDosNumeros(1, 5); // resultado es 6
+
+
+
+Declaración 'return'
+
+La declaración return nos permite devolver algo; en el caso anterior el resultado de la suma de dos números.
+La declaración es la forma en que los datos salen de una función. Solo es posible acceder a lo que se devuelve fuera de la función.
+Se debe tener en cuenta que la función detiene inmediatamente lo que esta ejecutando y "devuelve" lo que se pide en el return.
+
+Ejemplo:
+
+function dividirDosNumeros(a, b) {
+	var producto = a / b;
+	return producto;
+}
+
+dividirDosNumeros(6, 3);  // resultado es 2
+console.log(producto);  // undefined, el console.log solo imprime datos no devuelve información como el return
+
+Como el console.log no puede acceder a algo dentro de la función es devolverlo, se puede establecer variables para igualar lo que devuelve una función, así:
+
+function restarDosNumeros(a, b) {
+	var diferencia = a - b;
+	return diferencia;
+}
+
+var diferenciaDeResta = restarDosNumeros(10, 9);
+console.log(diferenciaDeResta); // resultado es 1
+console.log(diferencia); // undefined
+
+Es posible ver que la diferencia se establece dentro de la función. La variable dentro de la función solo pertenece dentro de la función.
+
+
+Declaraciones 'if'
+
+Las declaraciones 'if' son pruebas que permiten verificar una condición, en cuyo caso solo posee dos respuestas "true" or "false".  Cuando el resultado es "true" la función se detiene, cuando es "false" continua evaluando.
+
+Ejemplo:
+function puedeManejar(edad) {
+	if (edad > 18) {
+	return true;
+	}
+
+return false;
+}
+
+puedeManejar(22); // la respuesta es true, la función se detiene
+
+En el ejemplo anterior se toma un número para la variable edad y evaluamos si (if) la declaración es "true" or "false" (22 > 18), como la respuesta es Afirmativa "true", el return es true y la función se detiene.  Si la respuesta fuera falsa, el return sera false  y la dunción continuará ejecutandose.
+ 
+
+
+Valores booleanos ('true' 'false')
+
+Los valores Booleanos son valores cualitativos, que solo ofrece dos resultados cuando se evalua una condicional 'if', "true" or "false"; como se observa en el ejemplo anterior.
+

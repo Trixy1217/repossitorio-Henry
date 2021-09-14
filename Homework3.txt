@@ -1,0 +1,117 @@
+Lección 4
+
+Bucles For y Arrays
+
+1. Explicar que es 
+	*Array
+
+2. Luego npm
+
+
+Arrays
+Los Arrays o matrices son contenedores de almacenamiento para colecciones de datos.  Para onstruir la matriz es simple, se declara una variable y se establece en [].  Luego podemos agregar al contenedor (separadas por comas) tantas cdenas, números o booleanos commo se quiera y acceder a esos elementos cuando se desee.
+
+	Const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+Método para contar los caractres de una matriz => .length
+
+	Const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+	console.log(nombresEstudiantes.length);  // 4
+
+
+Acceso al elemento de una matriz 	
+Se puede acceder a un elemento de una matriz en cualquier momento, solo con la posiciónn numérica (índice) dentro de la matriz en orden.
+El orden numérico de una matriz SIEMPRE comienza en 0, es decir, que el primer elemento está en el índice 0, el segundo elemento en el índice 1, el tercer elemento en el índice 2, así sucesivamente.
+
+Para acceder al elemento, escribiremos el nombre o la variable de matriz, seguidos  de corchetes que contienen la asignación numérica.
+
+	Const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+
+	console.log(nombresEstudiantes[1]);  // 'Antonio'
+
+Con [.length -1] ubicamos el ultimo elemento cuando no se sabe el número de elementos dentro de la matriz.
+
+	console.log(nombresEstudiantes[nombresEstudiantes.length - 1]);  // 'Samuel'
+
+
+Asiggnación
+Es posible asignar y reasignar cualquier índice en la matriz usando el corchetes / índice y un "=".
+
+	Const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+	nombresEstudiantes = [0] = ['Jorge'];
+
+	console.log(nombresEstudiantes);  // 'Jorge', 'Antonio', 'Sara', 'Samuel']
+
+
+Métodos '.push' y '.pop'
+
+Métodos para adicionar y eliminar elementos de la matriz después de declaraión inicial.
+
+'.push' AGREGA un elemento al final de la matriz incrementando su longitud en 1.
+'.push' devuelve la longitud nueva.
+
+	Const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+	nombresEstudiantes.push('Patricia');
+
+	console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara', 'Samuel', 'Patricia']
+
+
+'.pop' ELIMINA el último elemento de la matriz, disminuyendo la longitud en 1.
+'.pop' devuelve el elemento "reventado" (_popped_).
+
+	Const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+	nombresEstudiantes.pop();
+	
+	console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara']
+
+
+Método '.unshift' y '.shift'
+
+El método '.unshift' y '.shift' son exactamente como '.push' y '.pop', excepto que operan en el primer elemento de la matriz. 
+
+El método '.unshift()' AGREGARÁ un nuevo elemento en la primera posición de la matriz. 
+
+
+	const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+	
+	nombresEstudiantes.unshift('Leo');
+
+	console.log(nombresEstudiantes);  // ['Leo', 'Martin', 'Antonio', 'Sara', 'Samuel']
+
+
+
+El método '.shift()` ELIMINARÁ el primer elemento de la matriz.
+
+	const nombresEstudiantes = ['Leo', 'Martin', 'Antonio', 'Sara', 'Samuel'];	
+
+	nombresEstudiantes.shift();
+
+	console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara', 'Samuel']
+
+
+Observaciones sobre las matrices
+
+Las matrices en Javascript pueden contener múltiples tipos de datos diferentes en la misma matriz.
+
+
+Utilizando bucles 'for' en arrays
+
+La mayoría de las veces, los bucles for se utilizan para iterar sobre todos los elementos de una matriz. Usando la técnica de acceso al índice, y así podemos acceder a cada elemento de la matriz. Para hacer esto, usamos el método '.length' como punto de parada para el ciclo.
+
+
+	const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
+
+	for (let i = 0; i < nombresEstudiantes.length; i++) {
+	    console.log(nombresEstudiantes[i]);	
+}
+
+// 'Martin'
+// 'Antonio'
+// 'Sara'
+// 'Samuel'
+	
